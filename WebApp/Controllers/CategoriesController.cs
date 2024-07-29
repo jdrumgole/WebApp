@@ -8,5 +8,13 @@ namespace WebApp.Controllers
         {
             return View();
         }
+        public IActionResult edit(int? id)
+        {
+            if (id.HasValue)
+                return new ContentResult { Content = id.ToString() };
+            else
+                return new ContentResult { Content = "Null content" };
+            
+        }
     }
 }
