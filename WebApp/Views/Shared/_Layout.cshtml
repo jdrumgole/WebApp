@@ -32,7 +32,14 @@
         </nav>
     </header>
     <div class="container">
-        @RenderBody()
+        <div>
+            @RenderSection("title")
+            <hr />
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+        
     </div>
 
 </body>
